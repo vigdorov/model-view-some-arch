@@ -1,19 +1,4 @@
-.display {
-    width: 500px;
-    height: 250px;
-    border: 1px solid black;
-}
-
-.val {
-    width: 150px;
-    height: 40px;
-    border: 1px solid black;
-    background-color: grey;
-}
-
-.sum {
-    width: 150px;
-    height: 40px;
-    border: 1px solid black;
-    background-color: green;
+.container {
+    display: flex;
+    flex-direction: column;
 }
