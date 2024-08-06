@@ -1,13 +1,12 @@
-import React from 'react';
-import {createRoot} from 'react-dom/client';
+import React from "react";
+import { createRoot } from "react-dom/client";
 
-import {Counter} from './Counter';
+import { Counter } from "./Counter";
 
-const root = createRoot(document.getElementById('root'));
+const root = createRoot(document.getElementById("root"));
 
 root.render(
-    <>
-        <Counter />
-        <Counter />
-    </>
+  <>
+    <Counter />
+  </>
 );
