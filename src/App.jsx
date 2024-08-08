@@ -1,12 +1,13 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 
-import { Counter } from "./Counter";
+import { FormFunc } from "./FormFunc";
 
 const root = createRoot(document.getElementById("root"));
 
 root.render(
   <>
-    <Counter />
+    {/* <Counter /> */}
+    <FormFunc />
   </>
 );
