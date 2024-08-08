@@ -1,20 +1,21 @@
 import React, { Component } from "react";
 
 let i = 0;
+
 export class Timer extends Component {
   constructor() {
     super();
     this.state = {
       counter: 0,
     };
-    this.handleIncrease = this.handleIncrease.bind(this);
+
   }
 
-  handleIncrease() {
+  handleIncrease = () => {
     this.setState((state) => ({
       counter: state.counter + 1,
     }));
-  }
+  };
 
   componentDidMount() {
     this.timer = setInterval(() => {

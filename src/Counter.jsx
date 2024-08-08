@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import "./App.css";
 import { Timer } from "./Timer";
+import {TimerFunc} from './TimerFunc';
 
 export class Counter extends Component {
   constructor() {
@@ -47,7 +48,7 @@ export class Counter extends Component {
         {this.state.isTimer && (
           <>
             <div> Timer:</div>
-            <Timer />
+            <TimerFunc />
           </>
         )}
         <button onClick={this.handleShowTimer}>CLICK ME, BITCH!!</button>

@@ -49,6 +49,7 @@ module.exports = {
                                 ],
                                 '@babel/preset-react',
                             ],
+                            plugins: ['transform-class-properties'],
                         },
                     },
                 ],
