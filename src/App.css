@@ -1,4 +1,43 @@
-.container {
+.calculator {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 200px;
+}
+
+.inputCalc {
+    display: flex;
+    margin-bottom: 10px;
+    width: 200px;
+    height: 30px;
+}
+
+.keypad {
+    display: flex;
+    width: 80px;
+}
+
+.result {
+    display: block;
+    margin-top: 20px;
+}
+
+button {
+    width: 80px;
+    height: 40px;
+    font-size: 18px;
+    padding: 5px;
 }
