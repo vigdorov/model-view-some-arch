@@ -5,6 +5,8 @@ import {createRoot} from "react-dom/client";
 import { CalculatorNew} from './CalculatorNew';
 import {CalculatorFunc} from './CalculatorFunc';
 
+import './storages';
+
 const root = createRoot(document.getElementById("root"));
 
 root.render(
