@@ -9,6 +9,7 @@ module.exports = {
     output: {
         filename: '[chunkhash].js',
         path: path.resolve(__dirname, 'build'),
+        publicPath: '/',
         clean: true,
     },
     optimization: {

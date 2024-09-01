@@ -28,7 +28,7 @@ export const Routing = () => {
 
     const [searchParams, setParams] = useSearchParams();
 
-    const modal = searchParams.getAll(); // show | hide
+    const modal = searchParams.get('modal'); // show | hide
 
     const handleNavigate = (event) => {
         navigate(event.target.name);
