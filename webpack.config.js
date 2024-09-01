@@ -1,7 +1,7 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
     mode: 'development',
@@ -55,13 +55,19 @@ module.exports = {
                         },
                     },
                 ],
+                "@babel/preset-react",
+              ],
+              plugins: ["transform-class-properties"],
             },
+          },
         ],
-    },
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: './src/App.html',
-        }),
-        new MiniCssExtractPlugin(),
+      },
     ],
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./src/App.html",
+    }),
+    new MiniCssExtractPlugin(),
+  ],
 };

@@ -1,15 +1,15 @@
 import React from "react";
-import {createRoot} from "react-dom/client";
+import { createRoot } from "react-dom/client";
 import {
-    createBrowserRouter,
-    createRoutesFromElements,
-    RouterProvider,
-    Route,
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+  createRoutesFromElements,
+  Routes,
 } from "react-router-dom";
-
-// import {FormFunc} from "./FormFunc";
-import {CalculatorNew} from './CalculatorNew';
-import {CalculatorFunc} from './CalculatorFunc';
+import { Root } from "./Root";
+import { Videos } from "./Videos";
+import { Video } from "./Video";
 
 
 import './storages';
@@ -18,13 +18,10 @@ import {Routing} from './Routing';
 const root = createRoot(document.getElementById("root"));
 
 const router = createBrowserRouter(
-    createRoutesFromElements(
-        <Route path="/" element={<Routing />} >
-            <Route path="/:u-menya-big-penis?/:id?/:color/" element={<Routing />} />
-        </Route>
-    )
+  createRoutesFromElements(
+    <Route path="/" element={<Root />}>
+      <Route path="videos" element={<Videos />}></Route>
+    </Route>
+  )
 );
-
-root.render(
-    <RouterProvider router={router} />
-);
+root.render(<RouterProvider router={router} />);
