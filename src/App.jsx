@@ -1,15 +1,15 @@
 import React from "react";
-import { createRoot } from "react-dom/client";
+import {createRoot} from "react-dom/client";
 import {
-  createBrowserRouter,
-  RouterProvider,
-  Route,
-  createRoutesFromElements,
-  Routes,
+    createBrowserRouter,
+    RouterProvider,
+    Route,
+    createRoutesFromElements,
+    Routes,
 } from "react-router-dom";
-import { Root } from "./Root";
-import { Videos } from "./Videos";
-import { Video } from "./Video";
+import {Root} from "./globalStore/Root";
+import {Videos} from "./Videos";
+import {Video} from "./Video";
 
 
 import './storages';
@@ -17,11 +17,18 @@ import {Routing} from './Routing';
 
 const root = createRoot(document.getElementById("root"));
 
+// const router = createBrowserRouter(
+//   createRoutesFromElements(
+//     <Route path="/" element={<Root />}>
+//       <Route path="videos" element={<Videos />}></Route>
+//     </Route>
+//   )
+// );
+
 const router = createBrowserRouter(
-  createRoutesFromElements(
-    <Route path="/" element={<Root />}>
-      <Route path="videos" element={<Videos />}></Route>
-    </Route>
-  )
+    createRoutesFromElements(
+        <Route path="/" element={<Root />} />
+    )
 );
+
 root.render(<RouterProvider router={router} />);
