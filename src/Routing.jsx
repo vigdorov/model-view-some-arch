@@ -18,28 +18,61 @@ const Page2 = () => {
     return <div>Page 2</div>
 }
 
+const store = {
+    mode: '',
+    id: ''
+};
+
+const types = ['edit', 'view'];
+
+const list = [
+    {id: 'yyy'},
+    {id: 'iii'},
+    {id: 'ooo'},
+];
+
 export const Routing = () => {
 
     const navigate = useNavigate();
 
     const params = useParams();
 
-    console.log({params})
-
     const [searchParams, setParams] = useSearchParams();
 
     const modal = searchParams.get('modal'); // show | hide
+    const id = searchParams.get('id'); // show | hide
+
+    const isValidId = () => {
+        return list.some(task => task.id === id);
+    };
+
+    const isShow = (() => {
+        if (modal === 'create') {
+            return true;
+        }
+
+        if (types.some(t => t === modal) && isValidId()) {
+            return true;
+        }
+
+        return false;
+    })();
 
     const handleNavigate = (event) => {
         navigate(event.target.name);
     }
-    
+
+    if (!isShow) {
+        return null;
+    }
+
     return <div>
         <h4>Hi routing!</h4>
-        {params?.page === 'page-1' && <Page1 />}
-        {params?.page === 'page-2' && <Page2 />}
-        <button name="/page-1" onClick={handleNavigate}>page 1</button>
-        <button name="/page-2" onClick={handleNavigate}>page 2</button>
-        {modal === 'show' && <div>show modal</div>}
+
+        {isShow && (<div>
+            <div>Modal: {modal}</div>
+            <div>Id: {id}</div>
+        </div>)}
+
     </div>
 }
