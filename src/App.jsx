@@ -11,9 +11,7 @@ import {Root} from "./globalStore/Root";
 import {Videos} from "./Videos";
 import {Video} from "./Video";
 
-
-import './storages';
-import {Routing} from './Routing';
+import {Breakpoints} from './Breakpoints';
 
 const root = createRoot(document.getElementById("root"));
 
@@ -25,10 +23,4 @@ const root = createRoot(document.getElementById("root"));
 //   )
 // );
 
-const router = createBrowserRouter(
-    createRoutesFromElements(
-        <Route path="/" element={<Routing />} />
-    )
-);
-
-root.render(<RouterProvider router={router} />);
+root.render(<Breakpoints />);
