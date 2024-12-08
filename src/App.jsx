@@ -1,19 +1,14 @@
-import React from "react";
-import {createRoot} from "react-dom/client";
-import {
-    createBrowserRouter,
-    RouterProvider,
-    Route,
-    createRoutesFromElements,
-    Routes,
-} from "react-router-dom";
-import {Root} from "./globalStore/Root";
-import {Videos} from "./Videos";
-import {Video} from "./Video";
+import React from 'react';
+import {createRoot} from 'react-dom/client';
+import {createBrowserRouter, RouterProvider, Route, createRoutesFromElements, Routes} from 'react-router-dom';
+import {Root} from './globalStore/Root';
+import {Videos} from './Videos';
+import {Video} from './Video';
 
 import {Breakpoints} from './Breakpoints';
+import {FilterFinder} from './filterFinder/FilterFindex';
 
-const root = createRoot(document.getElementById("root"));
+const root = createRoot(document.getElementById('root'));
 
 // const router = createBrowserRouter(
 //   createRoutesFromElements(
@@ -23,4 +18,4 @@ const root = createRoot(document.getElementById("root"));
 //   )
 // );
 
-root.render(<Breakpoints />);
+root.render(<FilterFinder />);
