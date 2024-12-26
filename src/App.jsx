@@ -6,7 +6,7 @@ import {Videos} from './Videos';
 import {Video} from './Video';
 
 import {Breakpoints} from './Breakpoints';
-import {FilterFinder} from './filterFinder/FilterFindex';
+import {Poper} from './poper/Poper';
 
 const root = createRoot(document.getElementById('root'));
 
@@ -18,4 +18,4 @@ const root = createRoot(document.getElementById('root'));
 //   )
 // );
 
-root.render(<FilterFinder />);
+root.render(<Poper />);
