@@ -1,12 +1,11 @@
 import React from 'react';
 import {createRoot} from 'react-dom/client';
 import {createBrowserRouter, RouterProvider, Route, createRoutesFromElements, Routes} from 'react-router-dom';
-import {Root} from './globalStore/Root';
 import {Videos} from './Videos';
 import {Video} from './Video';
 
 import {Breakpoints} from './Breakpoints';
-import {Poper} from './poper/Poper';
+import {Root} from './init-loading/Root';
 
 const root = createRoot(document.getElementById('root'));
 
@@ -18,4 +17,4 @@ const root = createRoot(document.getElementById('root'));
 //   )
 // );
 
-root.render(<Poper />);
+root.render(<Root />);
