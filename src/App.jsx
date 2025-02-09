@@ -5,7 +5,7 @@ import {Videos} from './Videos';
 import {Video} from './Video';
 
 import {Breakpoints} from './Breakpoints';
-import {Root} from './init-loading/Root';
+import {Root} from './redux/Root';
 
 const root = createRoot(document.getElementById('root'));
 
