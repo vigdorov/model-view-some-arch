@@ -5,7 +5,7 @@ import {Videos} from './Videos';
 import {Video} from './Video';
 
 import {Breakpoints} from './Breakpoints';
-import {Root} from './redux/Root';
+import {ApiRoot} from './api/ApiComponent';
 
 const root = createRoot(document.getElementById('root'));
 
@@ -17,4 +17,4 @@ const root = createRoot(document.getElementById('root'));
 //   )
 // );
 
-root.render(<Root />);
+root.render(<ApiRoot />);
